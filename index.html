@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeroTime Store | Ben10 Collection</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: white;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.9);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #7cff00;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+      color: #7cff00;
+    }
+
+    .hero-content p {
+      color: #d1d5db;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #7cff00;
+      color: black;
+      text-decoration: none;
+      border-radius: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #98ff32;
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #7cff00;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 850px;
+    }
+
+    .about p {
+      color: #d1d5db;
+      font-size: 1.05rem;
+    }
+
+    .products-grid,
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #171717;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #2b2b2b;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #7cff00;
+    }
+
+    .card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      background: #222;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .card-content p {
+      color: #cfcfcf;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .review-card {
+      background: #171717;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #2b2b2b;
+    }
+
+    .stars {
+      color: gold;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .review-card h4 {
+      margin-top: 15px;
+      color: #7cff00;
+    }
+
+    .shop-now {
+      text-align: center;
+    }
+
+    .shop-now p {
+      color: #d1d5db;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: black;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media(max-width:768px) {
+      .hero-content h1 {
+        font-size: 2.7rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#store">HeroTime Store</a>
+    <a href="#jackets">Ben10 Jackets</a>
+    <a href="#tshirts">Ben10 T-Shirts</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#shop">Shop Now</a>
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <h1>HEROTIME STORE</h1>
+      <p>
+        Premium Ben10 Inspired Fashion Collection Featuring Stylish Jackets,
+        Graphic T-Shirts, and Modern Anime Streetwear.
+      </p>
+
+      <a href="#shop" class="btn">Explore Collection</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2 class="section-title">About HeroTime Store</h2>
+
+    <p>
+      HeroTime Store is a modern anime-inspired clothing brand focused on premium Ben10 fashion.
+      Our collection combines streetwear aesthetics, bold graphics, and comfortable fabrics
+      to create stylish outfits for anime and cartoon fans.
+    </p>
+  </section>
+
+  <section id="store">
+    <h2 class="section-title">Clothing Brand HeroTime Store</h2>
+
+    <div class="products-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x600.png?text=Ben10+Jacket+Photo" alt="Ben10 Jacket Placeholder">
+
+        <div class="card-content">
+          <h3>Premium Ben10 Jackets</h3>
+          <p>
+            Stylish anime-inspired jackets with modern streetwear vibes and premium comfort.
+          </p>
+
+          <a href="#" class="btn">View Jackets</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/500x600.png?text=Ben10+T-Shirt+Photo" alt="Ben10 T-Shirt Placeholder">
+
+        <div class="card-content">
+          <h3>Ben10 Graphic T-Shirts</h3>
+          <p>
+            Oversized and aesthetic t-shirts designed for anime lovers and streetwear fans.
+          </p>
+
+          <a href="#" class="btn">View T-Shirts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="jackets">
+    <h2 class="section-title">Ben10 Jackets</h2>
+
+    <div class="products-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x600.png?text=Ben10+Jacket+1" alt="Ben10 Jacket">
+
+        <div class="card-content">
+          <h3>Alien Force Jacket</h3>
+          <p>
+            Premium black and green varsity jacket inspired by Ben10 Alien Force.
+          </p>
+
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/500x600.png?text=Ben10+Jacket+2" alt="Ben10 Jacket">
+
+        <div class="card-content">
+          <h3>Omnitrix Hoodie Jacket</h3>
+          <p>
+            Comfortable oversized jacket featuring futuristic Omnitrix-inspired styling.
+          </p>
+
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tshirts">
+    <h2 class="section-title">Ben10 T-Shirts</h2>
+
+    <div class="products-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x600.png?text=Ben10+T-Shirt+1" alt="Ben10 T-Shirt">
+
+        <div class="card-content">
+          <h3>Classic Ben10 Tee</h3>
+          <p>
+            Modern oversized Ben10 t-shirt with premium cotton fabric and bold graphics.
+          </p>
+
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/500x600.png?text=Ben10+T-Shirt+2" alt="Ben10 T-Shirt">
+
+        <div class="card-content">
+          <h3>Alien Graphic Tee</h3>
+          <p>
+            Anime streetwear inspired graphic t-shirt with aesthetic oversized fit.
+          </p>
+
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Amazing quality and the Ben10 designs look super premium.”
+        </p>
+        <h4>- Customer Name</h4>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Perfect for anime streetwear lovers. Comfortable and stylish.”
+        </p>
+        <h4>- Customer Name</h4>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “The jackets are absolutely fire. Great fitting and premium feel.”
+        </p>
+        <h4>- Customer Name</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" class="shop-now">
+    <h2 class="section-title">Shop Now</h2>
+
+    <p>
+      Explore the latest HeroTime Store Ben10 fashion collection.
+    </p>
+
+    <a href="#" class="btn">Visit Store</a>
+  </section>
+
+  <footer>
+    © 2026 HeroTime Store. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
